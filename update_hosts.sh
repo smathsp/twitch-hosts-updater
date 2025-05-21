@@ -16,6 +16,6 @@ for DOMAIN in $DOMAINS; do
 done
 
 # 将 hosts 内容写入文件
-echo "$HOSTS_CONTENT" > hosts
+echo "$HOSTS_CONTENT" > twitch-hosts
 
 echo "Successfully updated hosts file: hosts"
