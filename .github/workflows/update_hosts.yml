@@ -16,6 +16,9 @@ jobs:
       - name: Install jq
         run: sudo apt update && sudo apt install jq -y
 
+      - name: Make script executable # 添加这一步
+        run: chmod +x update_hosts.sh
+
       - name: Run script
         run: ./update_hosts.sh
 
