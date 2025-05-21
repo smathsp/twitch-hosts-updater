@@ -1,0 +1,28 @@
+name: Update Hosts File
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天 UTC 时间 00:00 运行 (北京时间 08:00)
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install jq
+        run: sudo apt update && sudo apt install jq -y
+
+      - name: Run script
+        run: ./update_hosts.sh
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add hosts
+          git commit -m "Update hosts file" || echo "No changes to commit"
+          git push origin main
