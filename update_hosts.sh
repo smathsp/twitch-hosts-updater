@@ -12,7 +12,7 @@ DOMAINS=$(echo "$INGEST_DATA" | jq -r '.ingests[].url_template | select(. != nul
 # 生成 hosts 文件内容
 HOSTS_CONTENT=""
 for DOMAIN in $DOMAINS; do
-  HOSTS_CONTENT+="$IP_ADDRESS $DOMAIN\n"
+  HOSTS_CONTENT+="$IP_ADDRESS $DOMAIN"$'\n'  # 修改了这里
 done
 
 # 将 hosts 内容写入文件
