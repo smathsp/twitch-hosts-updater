@@ -2,8 +2,11 @@ name: Update Hosts File
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 每天 UTC 时间 00:00 运行 (北京时间 08:00)
+    - cron: "0 0 * * *"
   workflow_dispatch:
+
+permissions: # 添加 permissions 块
+  contents: write # 授予写入权限
 
 jobs:
   update:
@@ -16,7 +19,7 @@ jobs:
       - name: Install jq
         run: sudo apt update && sudo apt install jq -y
 
-      - name: Make script executable # 添加这一步
+      - name: Make script executable
         run: chmod +x update_hosts.sh
 
       - name: Run script
