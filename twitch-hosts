@@ -1,6 +1,7 @@
 192.168.0.1 ams02.contribute.live-video.net
 192.168.0.1 ams03.contribute.live-video.net
 192.168.0.1 apn10.contribute.live-video.net
+192.168.0.1 apn20.contribute.live-video.net
 192.168.0.1 aps10.contribute.live-video.net
 192.168.0.1 aps20.contribute.live-video.net
 192.168.0.1 aps30.contribute.live-video.net
@@ -36,12 +37,12 @@
 192.168.0.1 muc01.contribute.live-video.net
 192.168.0.1 ord03.contribute.live-video.net
 192.168.0.1 ord56.contribute.live-video.net
+192.168.0.1 osa01.contribute.live-video.net
 192.168.0.1 osl.contribute.live-video.net
 192.168.0.1 prg03.contribute.live-video.net
 192.168.0.1 qro03.contribute.live-video.net
 192.168.0.1 sae10.contribute.live-video.net
 192.168.0.1 sea02.contribute.live-video.net
-192.168.0.1 sel03.contribute.live-video.net
 192.168.0.1 sjc06.contribute.live-video.net
 192.168.0.1 tpe01.contribute.live-video.net
 192.168.0.1 vie02.contribute.live-video.net
